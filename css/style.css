@@ -11,10 +11,6 @@ body{
     background-color: white;
 }
 
-#botonanadir{
-    margin-left: 0.5em;
-}
-
 #cuerpodepagina {
     float:right;
     width:85%;
@@ -24,14 +20,14 @@ body{
     background-color: whitesmoke;
 }
 
+h4 {
+    text-align: center;
+}
+
 header {
     margin: 0em;
     padding: 0em;
     color: black;
-}
-
-p {
-    text-align: center;
 }
 
 aside {
@@ -42,6 +38,10 @@ aside {
     height: 100%;
     background-color:rgb(60, 60, 125);
     color: whitesmoke;
+}
+
+#botonanadir{
+    margin-left: 0.5em;
 }
 
 h1{
