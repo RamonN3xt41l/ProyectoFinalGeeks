@@ -77,6 +77,10 @@ h3{
     font-size: medium;
 }
 
+.mimenu:hover{
+    color:black;
+}
+
 *::-webkit-input-placeholder {
     /* Google Chrome y Safari */
     color:darkgrey;

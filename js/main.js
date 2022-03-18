@@ -59,7 +59,7 @@ function GuardaCanal()
             {
             //p.innerHTML= canales[i];
             console.log(canales[i]);
-            p.innerHTML= '<div onclick="muestramensajes()">canales[i]</div>'
+            p.innerHTML= '<div class="mimenu" onclick="muestramensajes()">canales[i]</div>'
             objetoh.appendChild(p);
             }
         document.getElementById("cajatextonuevocanal").value = "";
