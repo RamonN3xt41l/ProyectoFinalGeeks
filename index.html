@@ -14,6 +14,22 @@
 <body>
     <title>My Final Geekshub Project</title>
 
+     <!-- aqui va a ir mi barra lateral -->
+     <aside id="menulateral">
+        <h1>Canales</h1>
+        <h2>Quiero Agregar un canal mas
+            <button id="botonanadir" onclick="CreaCanal()">+</button>
+        </h2>
+        <input id="cajatextonuevocanal" hidden="true" type="text" name="nuevo_canal_a_crear" size="22" placeholder="Escribe el nombre del canal a crear">
+        <button id="botonguardar" hidden="true" onclick="GuardaCanal()">Save</button>
+        <div id="error1"></div>
+        <h3 id="mychannels">
+            Listado de canales existentes
+            <!-- aqui va a ir un array con mis canales creables-->
+        </h3>
+
+    </aside>
+
     <!-- aqui va a ir mi chat de cada canal -->
     <section id="cuerpodepagina">
         <header>
@@ -25,21 +41,6 @@
 
 
     </section>
-
-     <!-- aqui va a ir mi barra lateral -->
-    <aside id="menulateral">
-        <h1>Canales</h1>
-        <h2>Quiero Agregar un canal mas
-            <button id="botonanadir" onclick="CreaCanal()">+</button>
-        </h2>
-        <input id="cajatextonuevocanal" hidden="true" type="text" name="nuevo_canal_a_crear" size="22" placeholder="Escribe el nombre del canal a crear">
-        <button id="botonguardar" hidden="true" onclick="GuardaCanal()">Save</button>
-        <h3 id="mychannels">
-            Listado de canales existentes
-            <!-- aqui va a ir un array con mis canales creables-->
-        </h3>
-
-    </aside>
 
      <!-- aqui va a ir mi footer -->
     <footer>
