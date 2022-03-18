@@ -1,0 +1,89 @@
+html{
+  margin: 0em;
+  padding: 0em;  
+  height: 100%;
+}
+
+body{
+    margin: 0em;
+    padding: 0em; 
+    height:100%;
+    background-color: white;
+}
+
+#botonanadir{
+    margin-left: 0.5em;
+}
+
+#cuerpodepagina {
+    float:right;
+    width:85%;
+    height:100%;
+    margin: 0em;
+    padding: 0em;
+    background-color: whitesmoke;
+}
+
+header {
+    margin: 0em;
+    padding: 0em;
+    color: black;
+}
+
+p {
+    text-align: center;
+}
+
+aside {
+    float:left;
+    margin: 0em;
+    padding: 0em; 
+    width:15%;
+    height: 100%;
+    background-color:rgb(60, 60, 125);
+    color: whitesmoke;
+}
+
+h1{
+    margin: 1em;
+    padding: 0em;
+}
+
+h2 {
+    margin: 1em;
+    padding: 0em;
+    font-size: small;
+}
+
+#cajatextonuevocanal {
+    margin: 1em;
+    padding: 0em;
+    margin-right: 0.5em;
+}
+
+h3{
+    margin: 1em;
+    padding-top: 3em;
+    font-size: medium;
+}
+
+*::-webkit-input-placeholder {
+    /* Google Chrome y Safari */
+    color:darkgrey;
+    font-size: x-small;
+}
+*:-moz-placeholder {
+    /* Firefox anterior a 19 */
+    color:darkgrey;
+    font-size: x-small;
+}
+*::-moz-placeholder {
+    /* Firefox 19 y superior */
+    color:darkgrey;
+    font-size: x-small;
+}
+*:-ms-input-placeholder {
+    /* Internet Explorer 10 y superior */
+    color:darkgrey;
+    font-size: x-small;
+}
