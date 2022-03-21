@@ -23,11 +23,13 @@ var canales = new Array (3)
 canales[0] = cadacanal0 canales[1] = cadacanal1 canales[2] = cadacanal2
 */
 
+let text1 = document.getElementById("cajatextonuevocanal");
+let boton1 = document.getElementById("botonguardar");
+let myerror1 = document.getElementById("error1");
+
+
 function CreaCanal() 
 {
-    let text1 = document.getElementById("cajatextonuevocanal");
-    let boton1 = document.getElementById("botonguardar");
-    let myerror1 = document.getElementById("error1");
     myerror1.innerHTML = '';
     if(text1.hidden == true && boton1.hidden == true) 
     {
@@ -42,10 +44,7 @@ function CreaCanal()
 
 function GuardaCanal() 
 {
-    let text1 = document.getElementById("cajatextonuevocanal");
-    let boton1 = document.getElementById("botonguardar");
     let objetoh = document.getElementById("mychannels");
-    let myerror1 = document.getElementById("error1");
     let p =document.createElement("p");
     var NombreCanal = document.getElementById("cajatextonuevocanal").value;
     if(NombreCanal != '')
@@ -59,7 +58,7 @@ function GuardaCanal()
             {
             //p.innerHTML= canales[i];
             console.log(canales[i]);
-            p.innerHTML= '<div class="mimenu" onclick="muestramensajes()">canales[i]</div>'
+            p.innerHTML= '<div class="mimenu" onclick="muestramensajes()">canales[i]</div>';
             objetoh.appendChild(p);
             }
         document.getElementById("cajatextonuevocanal").value = "";
@@ -73,5 +72,8 @@ function GuardaCanal()
 }
 
 function muestramensajes() {
-    console.log('ya estoy aqui')
+    let contenedorprincipal = document.getElementById("contenedorprinc");
+    let mydiv =document.createElement("div");
+    mydiv.innerHTML = '<div class="mismensajes"> patatas sin pablo</div>';
+    contenedorprincipal.appendChild(mydiv);
 } 
