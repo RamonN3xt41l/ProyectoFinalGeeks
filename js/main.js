@@ -1,5 +1,6 @@
 class ChannelMessages {
-    constructor(authorname, messagetime, messagecontent) {
+    constructor(channelOwner,authorname, messagetime, messagecontent) {
+        this.channelOwner = '';
         this.AuthorName = 'UserRandom';
         this.MessageTime = '2022-11-01 11:00';
         this.MessageContent = 'contenidomensaje';
@@ -50,7 +51,7 @@ function GuardaCanal()
         button1.hidden = true;
     } else 
     {
-        myError1.innerHTML = 'Por favor introduce un valor'
+        myError1.innerHTML = 'Please enter the channel name'
 
     }
 }
@@ -62,9 +63,12 @@ function muestraMensajes(channelKey) {
         MessageButton.hidden = false
     }
     let MainContainer = document.getElementById("contenedorprinc");
+    let PageHeader = document.getElementById("MainHeader")
     MainContainer.innerHTML = "";
+    PageHeader.innerHTML="";
     let MyDiv =document.createElement("div");
-    var RamonMensaje = new ChannelMessages();
-    MyDiv.innerHTML = '<div class="MyMessages">'+RamonMensaje.MessageContent+'</div>';
+    var RamonMessage = new ChannelMessages();
+    MyDiv.innerHTML = '<div class="MyMessages">'+RamonMessage.MessageContent+'</div>';
+    PageHeader.innerHTML = '<input id="SearchMessageBox" type="text" name="Search_message_box" size=100% placeholder="Write whatever you wanna search"><button id="Searcher" onclick="SearchInChannel()">Search</button>';
     MainContainer.appendChild(MyDiv);
 } 
