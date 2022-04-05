@@ -28,9 +28,35 @@ body{
     font-size: x-large;
 }
 
+#SearchingCOntainer {
+    width: 100%;
+}
+
+#SearchMessageBox {
+    width: 80%;
+    margin-right: 0.5em;
+    margin-left: 1em;
+}
+
+#Searcher {
+    width: 5em;
+    margin-right: 3em;
+}
+
 #MainFooter {
     position: absolute;
     bottom: 1em;
+    width: 100%;
+}
+
+#NewMessageBox {
+    width: 90%;
+    margin-right: 5em;
+}
+
+#SaveMessage {
+    width: 2em;
+   
 }
 
 h4 {
