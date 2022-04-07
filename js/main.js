@@ -82,16 +82,20 @@ function SaveMessage() {
     var MessageWritten = document.getElementById("NewMessageBox").value;
     NewMessage.MessageContent = MessageWritten;
     NewMessage.channelOwner= ChanelForTheMessage;
+    NewMessage.AuthorName= 'RamonCampos';
+    NewMessage.MessageTime= new Date().toDateString();
+    console.log(NewMessage.MessageTime);
     Messages = channels.get(ChanelForTheMessage);
     Messages.push(NewMessage);
-    console.log(Messages);
-    console.log(channels);
     document.getElementById("NewMessageBox").value = "";
     MyDiv.innerHTML = "";
     let MainContainer = document.getElementById("contenedorprinc");
     for (let i = 0; i< Messages.length; i++){
-        MyDiv.innerHTML = '<div class="MyMessages">'+Messages[i].MessageContent+'</div>';
+        MyDiv.innerHTML = '<div>'+Messages[i].AuthorName+'   '+Messages[i].MessageTime+'</div><div class="MyMessages">'+Messages[i].MessageContent+'</div>';
         MainContainer.appendChild(MyDiv);
     }
+
+// me queda el buscador, ser capaz de hacer el scroll, guardar fecha y hora, ¿poner imagen de fondo?
+
 
 }
