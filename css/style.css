@@ -26,6 +26,7 @@ body{
 #MainHeader {
     margin-top: 1em;
     font-size: x-large;
+    height: 3em;
 }
 
 #SearchingCOntainer {
@@ -43,15 +44,36 @@ body{
     margin-right: 3em;
 }
 
+#MainBody{
+    height: calc(100% - 11em);
+    overflow-y: auto;
+}
+
 #MainFooter {
     position: absolute;
-    bottom: 1em;
+    bottom:0;
     width: 100%;
+    background-color: whitesmoke;
+    height: 3em;
+    padding-bottom: 1em;
 }
 
 #NewMessageBox {
     width: 90%;
     margin-right: 5em;
+}
+
+.ActualAuthorTime{
+    padding: 1em;
+    color: black;
+    font-weight: 800;
+}
+
+.ActualMessages{
+    padding: 0.5em;
+    padding-left: 1em;
+    color: black;
+    font-weight: 300;
 }
 
 #SaveMessage {
@@ -82,12 +104,12 @@ aside {
     margin-left: 0.5em;
 }
 
-h1{
+#Firstdiv{
     margin: 1em;
     padding: 0em;
 }
 
-h2 {
+#Seconddiv {
     margin: 1em;
     padding: 0em;
     font-size: small;
@@ -98,6 +120,11 @@ h2 {
     margin-bottom: 0em;
     padding: 0em;
     margin-right: 0.5em;
+    visibility: hidden;
+}
+
+#savebutton {
+    visibility: hidden;
 }
 
 #error1 {
@@ -108,10 +135,14 @@ h2 {
     color: red;
 }
 
-h3{
+#mychannels{
     margin: 1em;
     padding-top: 3em;
     font-size: medium;
+}
+
+#contenedorprinc {
+    overflow: hidden;
 }
 
 .mimenu:hover{

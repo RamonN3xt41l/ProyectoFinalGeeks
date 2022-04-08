@@ -10,43 +10,41 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" >
     <title>Proyecto Final Programacion desde cero</title>
 </head>
-<body>
-    <title>My Final Geekshub Project</title>
+<body id="InitialBody">
+   <title>My Final Geekshub Project</title>
 
-     <!-- aqui va a ir mi barra lateral -->
+     <!-- deberia ser h1 -->
      <aside id="menulateral">
-        <h1>Channels</h1>
-        <h2>I want to add a channel
+        <div id="Firstdiv">Channels</div>
+        <div id="Seconddiv">I want to add a channel
             <button id="botonanadir" onclick="CreateChannel()">+</button>
-        </h2>
-        <input id="newchanneltextbox" hidden="true" type="text" name="nuevo_canal_a_crear" size="22" placeholder="Write the channel name to be created">
-        <button id="botonguardar" hidden="true" onclick="SaveChannel()">Save</button>
+        </div>
+        <input id="newchanneltextbox" type="text" name="nuevo_canal_a_crear" size="22" placeholder="Write the channel name to be created">
+        <button id="savebutton" onclick="SaveChannel()">Save</button>
         <div id="error1"></div>
-        <h3 id="mychannels">
+        <div id="mychannels">
             Existing channels
             <!-- aqui va a ir un array con mis canales creables-->
-        </h3>
+        </div>
 
     </aside>
 
     <!-- aqui va a ir mi chat de cada canal -->
 
     <section id="cuerpodepagina">
-        <header id="MainHeader">
+        <div id="MainHeader">
         Welcome to RamonCampos Project for Geekshub Academy
-        </header>
-        <body id="MainBody">
-            <h5 id="contenedorprinc"></h5>
-        </body>
+        </div>
+        <div id="MainBody">
+            <div id="contenedorprinc"></div>
+        </div>
         <div id="MainFooter">
             <button id="SaveMessage" hidden="true" onclick="SaveMessage()">+</button>
             <input id="NewMessageBox" hidden="true" type="text" name="New_message_box" placeholder="Write your message here">
         </div>
 
 
-    </section>
-    <footer>
-    </footer>    
+    </section>  
      <!-- aqui va a ir mi codigo javascript -->
     <script src="js/main.js"></script>
 </body>

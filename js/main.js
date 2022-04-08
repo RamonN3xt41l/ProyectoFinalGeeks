@@ -11,7 +11,7 @@ class ChannelMessages {
 var channels= new Map(); 
 //var eachChannel = new Array();
 let text1 = document.getElementById("newchanneltextbox");
-let button1 = document.getElementById("botonguardar");
+let button1 = document.getElementById("savebutton");
 let myError1 = document.getElementById("error1");
 let messageText = document.getElementById("NewMessageBox");
 let MessageButton = document.getElementById("SaveMessage");
@@ -20,6 +20,15 @@ let MessageButton = document.getElementById("SaveMessage");
 function CreateChannel() 
 {
     myError1.innerHTML = '';
+    if (text1.style.visibility === "hidden" && button1.style.visibility === "hidden") {
+        text1.style.visibility = "visible"
+        button1.style.visibility = "visible"
+    } else {
+        text1.style.visibility = "hidden"
+        button1.style.visibility = "hidden"
+    }
+
+    /*
     if(text1.hidden == true && button1.hidden == true) 
     {
         text1.hidden = false;
@@ -29,6 +38,7 @@ function CreateChannel()
         text1.hidden = true;
         button1.hidden = true;
     }
+    */
 }
 
 function SaveChannel() 
@@ -45,8 +55,8 @@ function SaveChannel()
             objetoH.appendChild(p);
         }
         document.getElementById("newchanneltextbox").value = "";
-        text1.hidden = true;
-        button1.hidden = true;
+        text1.style.visibility = "hidden"
+        button1.style.visibility = "hidden"
     } else 
     {
         myError1.innerHTML = 'Please enter the channel name'
@@ -68,7 +78,8 @@ function ShowChannelMessages(channelKey) {
     Messages = channels.get(channelKey); 
     for (let i = 0; i< Messages.length; i++){
         let MyDiv =document.createElement("div");
-        MyDiv.innerHTML = '<div class="MyMessages">'+Messages[i].MessageContent+'</div>';
+        MyDiv.innerHTML = '<div class="ActualAuthorTime">'+Messages[i].AuthorName+'   '+Messages[i].MessageTime+'</div><div class="ActualMessages">'+Messages[i].MessageContent+'</div>';
+        //MyDiv.innerHTML = '<div class="MyMessages">'+Messages[i].MessageContent+'</div>';
         MainContainer.appendChild(MyDiv);
     }
 } 
@@ -83,19 +94,54 @@ function SaveMessage() {
     NewMessage.MessageContent = MessageWritten;
     NewMessage.channelOwner= ChanelForTheMessage;
     NewMessage.AuthorName= 'RamonCampos';
-    NewMessage.MessageTime= new Date().toDateString();
-    console.log(NewMessage.MessageTime);
+
+    // probablemente esto hay q refactorizarlo
+    var moment = new Date();
+    hour = moment.getHours();
+    minute = moment.getMinutes();
+    second = moment.getSeconds();
+    day = moment.toLocaleDateString();
+    str_second = new String (second)
+    if (str_second.length == 1)
+       second = "0" + second
+    str_minute = new String (minute)
+    if (str_minute.length == 1)
+       minute = "0" + minute
+    str_hour = new String (hour)
+    if (str_hour.length == 1)
+       hora = "0" + hora
+    PrintableTime = "--> " + hour + ":" + minute + ":" + second + "  (" + day + ")";
+    // hasta aqui
+
+    NewMessage.MessageTime= PrintableTime;
     Messages = channels.get(ChanelForTheMessage);
     Messages.push(NewMessage);
     document.getElementById("NewMessageBox").value = "";
     MyDiv.innerHTML = "";
     let MainContainer = document.getElementById("contenedorprinc");
     for (let i = 0; i< Messages.length; i++){
-        MyDiv.innerHTML = '<div>'+Messages[i].AuthorName+'   '+Messages[i].MessageTime+'</div><div class="MyMessages">'+Messages[i].MessageContent+'</div>';
+        MyDiv.innerHTML = '<div class="ActualAuthorTime">'+Messages[i].AuthorName+'   '+Messages[i].MessageTime+'</div><div class="ActualMessages">'+Messages[i].MessageContent+'</div>';
         MainContainer.appendChild(MyDiv);
     }
 
-// me queda el buscador, ser capaz de hacer el scroll, guardar fecha y hora, ¿poner imagen de fondo?
+   // me queda el buscador, ser capaz de hacer el scroll
 
 
+}
+
+
+function SearchInChannel(){
+
+    var MessageSearched = document.getElementById("SearchMessageBox").value; // paso 1
+    var ChanelForTheMessage = document.getElementById("SearchingContainer").innerHTML; //recogiendo nombre del canal
+
+
+
+    /*hay q realizar una busqueda del mensaje escrito en caja dentro de mi array del canal
+
+    Paso 1: recoger el texto guardao
+
+    Paso 2: metodo de arrays xa hacer una busqueda, el array que es lo tengo por el nombre del canal, 
+
+    */
 }
