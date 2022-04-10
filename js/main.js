@@ -97,12 +97,6 @@ function show(ElementHtml){
     ElementHtml.style.visibility = "visible";
 }
 
-function AddAZeroToTheStringIfNeeded(StringAttached){
-    if (new String (StringAttached).length == 1)
-    StringAttached = "0" + StringAttached;
-    else StringAttached
-}
-
 
 function SearchInChannel(){
 
@@ -111,17 +105,16 @@ function SearchInChannel(){
     let MainContainer = document.getElementById("contenedorprinc");
     let ExtraDiv = document.createElement("div");
     ChannelToSearch = channels.get(ChanelForTheMessage);
-    
-    // recorro todo mi array xa ver que mensajes coiniciden con el mensaje a buscar
     MainContainer.innerHTML = "The messages you are looking for are:";
     for (let i = 0; i< ChannelToSearch.length; i++){
         if(ChannelToSearch[i].MessageContent.includes(MessageSearched)){
             let MyDiv = document.createElement("div");
             MyDiv.innerHTML = '<div class="SearchedDiv">'+ChannelToSearch[i].AuthorName+'   '+ChannelToSearch[i].MessageTime+'</div><div class="SearchedMessages">'+ChannelToSearch[i].MessageContent+'</div>';
             MainContainer.appendChild(MyDiv);
-        } else if (MainContainer.innerHTML === "The messages you are looking for are:") {
+        } 
+    }
+    if (MainContainer.childElementCount<1){
             MainContainer.innerHTML = "There are no messages containing the text you are looking for"
-        }
     }
     ExtraDiv.innerHTML = 'In order to return to the channel messages please click here: <button onclick="ReturnToChannel()">Return</button>';
     MainContainer.appendChild(ExtraDiv);
@@ -130,12 +123,13 @@ function SearchInChannel(){
 function ReturnToChannel() {
     let MainContainer = document.getElementById("contenedorprinc");
     let ChanelForTheMessage = document.getElementById("SearchingContainer").innerHTML;
-    MainContainer.innerHTML = ""
+    MainContainer.innerHTML = "";
     MessagesToShow = channels.get(ChanelForTheMessage);
     for (let i = 0; i< MessagesToShow.length; i++){
         let MyDiv =document.createElement("div");
         MyDiv.innerHTML = '<div class="ActualAuthorTime">'+Messages[i].AuthorName+' --> --> '+Messages[i].MessageTime+'</div><div class="ActualMessages">'+Messages[i].MessageContent+'</div>';
         MainContainer.appendChild(MyDiv);
     }
+    document.getElementById("SearchMessageBox").value = "";
 
 }
