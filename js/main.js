@@ -47,7 +47,8 @@ function SaveChannel()
     }
 }
 
-function ShowChannelMessages(channelKey) {
+function ShowChannelMessages(channelKey) 
+{
     if(window.getComputedStyle(MessageContainer).visibility === "hidden") {
         show(MessageContainer);
     }
@@ -55,7 +56,7 @@ function ShowChannelMessages(channelKey) {
     let PageHeader = document.getElementById("MainHeader")
     MainContainer.innerHTML = "";
     PageHeader.innerHTML="";
-    PageHeader.innerHTML = `<div><div id="SearchingContainer">${channelKey}</div><input id="SearchMessageBox" type="text" name="Search_message_box" placeholder="Search within this channel"><button id="Searcher" onclick="SearchInChannel()">Search</button></div>`;
+    PageHeader.innerHTML = `<div><div id="SearchingContainer">${channelKey}</div><input id="SearchMessageBox" type="text" oninput="SearchInChannel()" name="Search_message_box" placeholder="Search within this channel"></div>`;
     Messages = channels.get(channelKey); 
     for (let i = 0; i< Messages.length; i++){
         let MyDiv =document.createElement("div");
@@ -66,7 +67,8 @@ function ShowChannelMessages(channelKey) {
 
 
 
-function SaveMessage() {
+function SaveMessage() 
+{
     let MyDiv =document.createElement("div");
     let ChanelForTheMessage = document.getElementById("SearchingContainer").innerHTML;
     let NewMessage = new ChannelMessages();
@@ -84,10 +86,6 @@ function SaveMessage() {
         MyDiv.innerHTML = '<div class="ActualAuthorTime">'+Messages[i].AuthorName+' --> --> '+Messages[i].MessageTime+'</div><div class="ActualMessages">'+Messages[i].MessageContent+'</div>';
         MainContainer.appendChild(MyDiv);
     }
-
-   // me queda el buscador
-
-
 }
 
 function hide(ElementHtml){
@@ -98,30 +96,6 @@ function hide(ElementHtml){
 function show(ElementHtml){
     ElementHtml.style.visibility = "visible";
 }
-/*
-function GetCUrrentDateTime(){
-    let moment = new Date();
-    let hour = moment.getHours();
-    let minute = moment.getMinutes();
-    let second = moment.getSeconds();
-    let day = moment.toLocaleDateString();
-    let day2 = moment.toLocaleString();
-    let str_second = new String (second);
-    let str_minute = new String (minute);
-    let str_hour = new String (hour);
-    
-    // puedo refactorizar esto?
-    if (str_second.length == 1)
-       second = "0" + second;
-    if (str_minute.length == 1)
-       minute = "0" + minute;
-    if (str_hour.length == 1)
-       hora = "0" + hora;
-   
-
-    PrintableTime = "--> " + hour + ":" + minute + ":" + second + "  (" + day + ")";
-    return PrintableTime;
-}*/
 
 function AddAZeroToTheStringIfNeeded(StringAttached){
     if (new String (StringAttached).length == 1)
@@ -132,16 +106,36 @@ function AddAZeroToTheStringIfNeeded(StringAttached){
 
 function SearchInChannel(){
 
-    var MessageSearched = document.getElementById("SearchMessageBox").value; // paso 1
-    var ChanelForTheMessage = document.getElementById("SearchingContainer").innerHTML; //recogiendo nombre del canal
+    let MessageSearched = document.getElementById("SearchMessageBox").value; // paso 1
+    let ChanelForTheMessage = document.getElementById("SearchingContainer").innerHTML; //recogiendo nombre del canal
+    let MainContainer = document.getElementById("contenedorprinc");
+    let ExtraDiv = document.createElement("div");
+    ChannelToSearch = channels.get(ChanelForTheMessage);
+    
+    // recorro todo mi array xa ver que mensajes coiniciden con el mensaje a buscar
+    MainContainer.innerHTML = "The messages you are looking for are:";
+    for (let i = 0; i< ChannelToSearch.length; i++){
+        if(ChannelToSearch[i].MessageContent.includes(MessageSearched)){
+            let MyDiv = document.createElement("div");
+            MyDiv.innerHTML = '<div class="SearchedDiv">'+ChannelToSearch[i].AuthorName+'   '+ChannelToSearch[i].MessageTime+'</div><div class="SearchedMessages">'+ChannelToSearch[i].MessageContent+'</div>';
+            MainContainer.appendChild(MyDiv);
+        } else if (MainContainer.innerHTML === "The messages you are looking for are:") {
+            MainContainer.innerHTML = "There are no messages containing the text you are looking for"
+        }
+    }
+    ExtraDiv.innerHTML = 'In order to return to the channel messages please click here: <button onclick="ReturnToChannel()">Return</button>';
+    MainContainer.appendChild(ExtraDiv);
+}
 
+function ReturnToChannel() {
+    let MainContainer = document.getElementById("contenedorprinc");
+    let ChanelForTheMessage = document.getElementById("SearchingContainer").innerHTML;
+    MainContainer.innerHTML = ""
+    MessagesToShow = channels.get(ChanelForTheMessage);
+    for (let i = 0; i< MessagesToShow.length; i++){
+        let MyDiv =document.createElement("div");
+        MyDiv.innerHTML = '<div class="ActualAuthorTime">'+Messages[i].AuthorName+' --> --> '+Messages[i].MessageTime+'</div><div class="ActualMessages">'+Messages[i].MessageContent+'</div>';
+        MainContainer.appendChild(MyDiv);
+    }
 
-
-    /*hay q realizar una busqueda del mensaje escrito en caja dentro de mi array del canal
-
-    Paso 1: recoger el texto guardao
-
-    Paso 2: metodo de arrays xa hacer una busqueda, el array que es lo tengo por el nombre del canal, 
-
-    */
 }
