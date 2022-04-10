@@ -8,29 +8,23 @@
     <meta name="author" content="Ramon Campos">
     <meta name="description" content="My Final Project Geekshub Online programacion desde cero en javascript">
     <link href="css/style.css" type="text/css" rel="stylesheet" >
-    <title>Proyecto Final Programacion desde cero</title>
+    <title>My Final Geekshub Project</title>
 </head>
 <body id="InitialBody">
-   <title>My Final Geekshub Project</title>
-
-     <!-- deberia ser h1 -->
-     <aside id="menulateral">
+    <aside id="menulateral">
         <div id="Firstdiv">Channels</div>
         <div id="Seconddiv">I want to add a channel
-            <button id="botonanadir" onclick="CreateChannel()">+</button>
+            <button id="AddingButton" onclick="CreateChannel()">+</button>
         </div>
-        <input id="newchanneltextbox" type="text" name="nuevo_canal_a_crear" size="22" placeholder="Write the channel name to be created">
-        <button id="savebutton" onclick="SaveChannel()">Save</button>
+        <div id="ChannelForm">
+            <input id="newchanneltextbox" type="text" name="nuevo_canal_a_crear" size="22" placeholder="Channel name to be created">
+            <button id="SaveButton" onclick="SaveChannel()">Save</button>
+        </div>
         <div id="error1"></div>
         <div id="mychannels">
             Existing channels
-            <!-- aqui va a ir un array con mis canales creables-->
         </div>
-
     </aside>
-
-    <!-- aqui va a ir mi chat de cada canal -->
-
     <section id="cuerpodepagina">
         <div id="MainHeader">
         Welcome to RamonCampos Project for Geekshub Academy
@@ -39,13 +33,10 @@
             <div id="contenedorprinc"></div>
         </div>
         <div id="MainFooter">
-            <button id="SaveMessage" hidden="true" onclick="SaveMessage()">+</button>
-            <input id="NewMessageBox" hidden="true" type="text" name="New_message_box" placeholder="Write your message here">
+            <button id="SaveMessage" onclick="SaveMessage()">+</button>
+            <input id="NewMessageBox" type="text" name="New_message_box" placeholder="Write your message here">
         </div>
-
-
     </section>  
-     <!-- aqui va a ir mi codigo javascript -->
     <script src="js/main.js"></script>
 </body>
 

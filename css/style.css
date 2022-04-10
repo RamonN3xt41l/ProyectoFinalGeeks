@@ -1,171 +1,170 @@
-html{
+html {
   margin: 0em;
-  padding: 0em;  
+  padding: 0em;
   height: 100%;
 }
 
-body{
-    margin: 0em;
-    padding: 0em; 
-    height:100%;
-    background-color: whitesmoke;
-    display:flex;
-    flex-direction: row;
-    align-items: center;
+body {
+  margin: 0em;
+  padding: 0em;
+  height: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #cuerpodepagina {
-    width:85%;
-    height:100%;
-    margin: 0em;
-    padding: 0em;
-    margin-left: 3em;
-    position: relative;
+  width: 85%;
+  height: 100%;
+  margin: 0em;
+  padding: 0em;
+  margin-left: 3em;
+  position: relative;
 }
 
 #MainHeader {
-    margin-top: 1em;
-    font-size: x-large;
-    height: 3em;
+  margin-top: 1em;
+  font-size: x-large;
+  height: 3em;
 }
 
 #SearchingCOntainer {
-    width: 100%;
+  width: 100%;
 }
 
 #SearchMessageBox {
-    width: 80%;
-    margin-right: 0.5em;
-    margin-left: 1em;
+  width: 80%;
+  margin-right: 0.5em;
+  margin-left: 1em;
 }
 
 #Searcher {
-    width: 5em;
-    margin-right: 3em;
+  width: 5em;
+  margin-right: 3em;
 }
 
-#MainBody{
-    height: calc(100% - 11em);
-    overflow-y: auto;
+#MainBody {
+  height: calc(100% - 11em);
+  overflow-y: auto;
 }
 
 #MainFooter {
-    position: absolute;
-    bottom:0;
-    width: 100%;
-    background-color: whitesmoke;
-    height: 3em;
-    padding-bottom: 1em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  height: 3em;
+  padding-bottom: 1em;
+  visibility: hidden;
 }
 
-#NewMessageBox {
-    width: 90%;
-    margin-right: 5em;
+.ActualAuthorTime {
+  padding: 1em;
+  color: black;
+  font-weight: 800;
 }
 
-.ActualAuthorTime{
-    padding: 1em;
-    color: black;
-    font-weight: 800;
-}
-
-.ActualMessages{
-    padding: 0.5em;
-    padding-left: 1em;
-    color: black;
-    font-weight: 300;
-}
-
-#SaveMessage {
-    width: 2em;
-   
+.ActualMessages {
+  padding: 0.5em;
+  padding-left: 1em;
+  color: black;
+  font-weight: 300;
 }
 
 h4 {
-    text-align: center;
+  text-align: center;
 }
 
 header {
-    margin: 0em;
-    padding: 0em;
-    color: black;
+  margin: 0em;
+  padding: 0em;
+  color: black;
 }
 
 aside {
-    margin: 0em;
-    padding: 0em; 
-    width:15%;
-    height: 100%;
-    background-color:rgb(60, 60, 125);
-    color: whitesmoke;
+  margin: 0em;
+  padding: 0em;
+  width: 15%;
+  height: 100%;
+  background-color: rgb(60, 60, 125);
+  color: whitesmoke;
 }
 
-#botonanadir{
-    margin-left: 0.5em;
+#AddingButton {
+  margin-left: 0.5em;
 }
 
-#Firstdiv{
-    margin: 1em;
-    padding: 0em;
+#Firstdiv {
+  margin: 1em;
+  padding: 0em;
 }
 
 #Seconddiv {
-    margin: 1em;
-    padding: 0em;
-    font-size: small;
+  margin: 1em;
+  padding: 0em;
+  font-size: small;
 }
 
 #newchanneltextbox {
-    margin: 1em;
-    margin-bottom: 0em;
-    padding: 0em;
-    margin-right: 0.5em;
-    visibility: hidden;
+  margin: 1em;
+  margin-bottom: 0em;
+  padding: 0em;
+  margin-right: 0.5em;
 }
 
-#savebutton {
-    visibility: hidden;
+#ChannelForm {
+  visibility: hidden;
+}
+
+#NewMessageBox {
+  width: 90%;
+  margin-right: 5em;
+}
+
+#SaveMessage {
+  width: 2em;
 }
 
 #error1 {
-    margin: 1em;
-    margin-top: 0em;
-    padding: 0em;
-    font-size:0.75em;
-    color: red;
+  margin: 1em;
+  margin-top: 0em;
+  padding: 0em;
+  font-size: 0.75em;
+  color: red;
 }
 
-#mychannels{
-    margin: 1em;
-    padding-top: 3em;
-    font-size: medium;
+#mychannels {
+  margin: 1em;
+  padding-top: 3em;
+  font-size: medium;
 }
 
 #contenedorprinc {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-.mimenu:hover{
-    color:black;
+.mimenu:hover {
+  color: black;
 }
 
 *::-webkit-input-placeholder {
-    /* Google Chrome y Safari */
-    color:darkgrey;
-    font-size: x-small;
+  /* Google Chrome y Safari */
+  color: darkgrey;
+  font-size: x-small;
 }
 *:-moz-placeholder {
-    /* Firefox anterior a 19 */
-    color:darkgrey;
-    font-size: x-small;
+  /* Firefox anterior a 19 */
+  color: darkgrey;
+  font-size: x-small;
 }
 *::-moz-placeholder {
-    /* Firefox 19 y superior */
-    color:darkgrey;
-    font-size: x-small;
+  /* Firefox 19 y superior */
+  color: darkgrey;
+  font-size: x-small;
 }
 *:-ms-input-placeholder {
-    /* Internet Explorer 10 y superior */
-    color:darkgrey;
-    font-size: x-small;
+  /* Internet Explorer 10 y superior */
+  color: darkgrey;
+  font-size: x-small;
 }
