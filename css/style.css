@@ -29,8 +29,9 @@ body {
   height: 3em;
 }
 
-#SearchingCOntainer {
-  width: 100%;
+#SearchingContainer {
+  margin-left: 0.5em;
+  font-family: sans-serif;
 }
 
 #SearchMessageBox {
@@ -130,6 +131,15 @@ aside {
   color: red;
 }
 
+#error2 {
+  margin: 1em;
+  margin-top: 0em;
+  margin-left: 2.5em;
+  padding: 0em;
+  font-size: 0.75em;
+  color: red;
+}
+
 #mychannels {
   margin: 1em;
   padding-top: 3em;
@@ -139,6 +149,19 @@ aside {
 #MainContainer {
   overflow: hidden;
 }
+
+#NoMessagesContainer{
+  margin: 1em;
+  font-family: sans-serif;
+}
+
+#ReturnContainer{
+  margin: 1em;
+  font-family: sans-serif;
+  color: darkgray;
+}
+
+
 
 .mimenu:hover {
   color: black;

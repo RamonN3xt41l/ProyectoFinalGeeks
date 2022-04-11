@@ -17,6 +17,7 @@ let MessageContainer = document.getElementById("MainFooter");
 let objetoH = document.getElementById("mychannels");
 let MainContainer = document.getElementById("MainContainer");
 let PageHeader = document.getElementById("MainHeader");
+let myError2 = document.getElementById("error2");
 
 function CreateChannel() 
 {
@@ -60,15 +61,20 @@ function SaveMessage()
     let ChanelForTheMessage = document.getElementById("SearchingContainer").innerHTML;
     let NewMessage = new ChannelMessages();
     let MessageWritten = document.getElementById("NewMessageBox").value;
-    NewMessage.MessageContent = MessageWritten;
-    NewMessage.channelOwner= ChanelForTheMessage;
-    NewMessage.AuthorName= 'RamonCampos';
-    NewMessage.MessageTime = new Date().toLocaleString();
-    Messages = channels.get(ChanelForTheMessage);
-    Messages.push(NewMessage);
-    document.getElementById("NewMessageBox").value = "";
-    MessageDiv.innerHTML = "";
-    for (let i = 0; i< Messages.length; i++) GetContainers(MessageDiv,Messages[i]);
+    if(MessageWritten != '')
+    {
+        myError2.innerHTML = '';
+        NewMessage.MessageContent = MessageWritten;
+        NewMessage.channelOwner= ChanelForTheMessage;
+        NewMessage.AuthorName= 'RamonCampos';
+        NewMessage.MessageTime = new Date().toLocaleString();
+        Messages = channels.get(ChanelForTheMessage);
+        Messages.push(NewMessage);
+        document.getElementById("NewMessageBox").value = "";
+        MessageDiv.innerHTML = "";
+        for (let i = 0; i< Messages.length; i++) GetContainers(MessageDiv,Messages[i]);
+    }
+    else myError2.innerHTML = 'Please enter a message';
 }
 
 function hide(ElementHtml)
@@ -96,8 +102,8 @@ function SearchInChannel()
             GetContainers(SearchDiv,ChannelToSearch[i]);
         } 
     }
-    if (MainContainer.childElementCount<1) MainContainer.innerHTML = "There are no messages containing the text you are looking for";
-    ExtraDiv.innerHTML = 'In order to return to the channel messages please click here: <button onclick="ReturnToChannel()">Return</button>';
+    if (MainContainer.childElementCount<1) MainContainer.innerHTML = '<div id="NoMessagesContainer">There are no messages containing the text you are looking for</div>';
+    ExtraDiv.innerHTML = '<div id="ReturnContainer">In order to return to the channel messages please click here: <button onclick="ReturnToChannel()">Return</button></div>';
     MainContainer.appendChild(ExtraDiv);
 }
 
