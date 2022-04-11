@@ -145,22 +145,22 @@ aside {
 }
 
 *::-webkit-input-placeholder {
-  /* Google Chrome y Safari */
+  /* Google Chrome and Safari */
   color: darkgrey;
   font-size: x-small;
 }
 *:-moz-placeholder {
-  /* Firefox anterior a 19 */
+  /* Firefox previous to 19 */
   color: darkgrey;
   font-size: x-small;
 }
 *::-moz-placeholder {
-  /* Firefox 19 y superior */
+  /* Firefox 19 and higher */
   color: darkgrey;
   font-size: x-small;
 }
 *:-ms-input-placeholder {
-  /* Internet Explorer 10 y superior */
+  /* Internet Explorer 10 and higher */
   color: darkgrey;
   font-size: x-small;
 }

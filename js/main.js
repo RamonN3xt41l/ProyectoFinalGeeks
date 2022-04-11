@@ -6,7 +6,7 @@ class ChannelMessages {
         this.MessageContent = '';
     }
 }
-var channels= new Map(); 
+let channels= new Map(); 
 let text1 = document.getElementById("newchanneltextbox");
 let button1 = document.getElementById("SaveButton");
 let myError1 = document.getElementById("error1");
@@ -125,3 +125,4 @@ function GetContainers(DivToDisPlay,ObjectToDisplay)
     MainContainer.appendChild(DivToDisPlay);
 }
 // pensar en meter un scroll en el listado de canales tmb
+// darle formato a los mensajes de busqueda
