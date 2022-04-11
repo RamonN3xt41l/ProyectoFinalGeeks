@@ -150,18 +150,17 @@ aside {
   overflow: hidden;
 }
 
-#NoMessagesContainer{
+.MessagesContainer{
   margin: 1em;
   font-family: sans-serif;
 }
+
 
 #ReturnContainer{
   margin: 1em;
   font-family: sans-serif;
   color: darkgray;
 }
-
-
 
 .mimenu:hover {
   color: black;

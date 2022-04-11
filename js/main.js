@@ -93,7 +93,7 @@ function SearchInChannel()
     let ChanelForTheMessage = document.getElementById("SearchingContainer").innerHTML;
     let ExtraDiv = document.createElement("div");
     ChannelToSearch = channels.get(ChanelForTheMessage);
-    MainContainer.innerHTML = "The messages you are looking for are:";
+    MainContainer.innerHTML = '<div class="MessagesContainer">The messages you are looking for are:</div>';
     for (let i = 0; i< ChannelToSearch.length; i++)
     {
         if(ChannelToSearch[i].MessageContent.includes(MessageSearched))
@@ -102,9 +102,10 @@ function SearchInChannel()
             GetContainers(SearchDiv,ChannelToSearch[i]);
         } 
     }
-    if (MainContainer.childElementCount<1) MainContainer.innerHTML = '<div id="NoMessagesContainer">There are no messages containing the text you are looking for</div>';
+    if (MainContainer.childElementCount<1) MainContainer.innerHTML = '<div class="MessagesContainer">There are no messages containing the text you are looking for</div>';
     ExtraDiv.innerHTML = '<div id="ReturnContainer">In order to return to the channel messages please click here: <button onclick="ReturnToChannel()">Return</button></div>';
     MainContainer.appendChild(ExtraDiv);
+    hide(MessageContainer);
 }
 
 function ReturnToChannel() 
@@ -114,6 +115,7 @@ function ReturnToChannel()
     MessagesToShow = channels.get(ChanelForTheMessage);
     DisplayMessages(MessagesToShow);
     document.getElementById("SearchMessageBox").value = "";
+    show(MessageContainer);
 }
 
 function DisplayMessages(ChannelToDIsplay) 
