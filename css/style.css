@@ -14,7 +14,7 @@ body {
   align-items: center;
 }
 
-#cuerpodepagina {
+#MainSection {
   width: 85%;
   height: 100%;
   margin: 0em;
@@ -72,10 +72,6 @@ body {
   font-weight: 300;
 }
 
-h4 {
-  text-align: center;
-}
-
 header {
   margin: 0em;
   padding: 0em;
@@ -95,12 +91,12 @@ aside {
   margin-left: 0.5em;
 }
 
-#Firstdiv {
+#FirstDiv {
   margin: 1em;
   padding: 0em;
 }
 
-#Seconddiv {
+#SecondDiv {
   margin: 1em;
   padding: 0em;
   font-size: small;
@@ -140,7 +136,7 @@ aside {
   font-size: medium;
 }
 
-#contenedorprinc {
+#MainContainer {
   overflow: hidden;
 }
 

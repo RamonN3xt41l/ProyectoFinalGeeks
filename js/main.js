@@ -15,7 +15,7 @@ let messageText = document.getElementById("NewMessageBox");
 let MessageButton = document.getElementById("SaveMessage");
 let MessageContainer = document.getElementById("MainFooter");
 let objetoH = document.getElementById("mychannels");
-let MainContainer = document.getElementById("contenedorprinc");
+let MainContainer = document.getElementById("MainContainer");
 let PageHeader = document.getElementById("MainHeader");
 
 function CreateChannel() 
@@ -103,7 +103,6 @@ function SearchInChannel()
 
 function ReturnToChannel() 
 {
-    let MainContainer = document.getElementById("contenedorprinc");
     let ChanelForTheMessage = document.getElementById("SearchingContainer").innerHTML;
     MainContainer.innerHTML = "";
     MessagesToShow = channels.get(ChanelForTheMessage);
@@ -125,3 +124,4 @@ function GetContainers(DivToDisPlay,ObjectToDisplay)
     DivToDisPlay.innerHTML = '<div class="ActualAuthorTime">'+ObjectToDisplay.AuthorName+' --> --> '+ObjectToDisplay.MessageTime+'</div><div class="ActualMessages">'+ObjectToDisplay.MessageContent+'</div>';
     MainContainer.appendChild(DivToDisPlay);
 }
+// pensar en meter un scroll en el listado de canales tmb

@@ -6,31 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, Primer Proyecto, Geekshub, RamonCampos">
     <meta name="author" content="Ramon Campos">
-    <meta name="description" content="My Final Project Geekshub Online programacion desde cero en javascript">
+    <meta name="description" content="My Final Project Geekshub Online javascript Programming from scratch">
     <link href="css/style.css" type="text/css" rel="stylesheet" >
     <title>My Final Geekshub Project</title>
 </head>
 <body id="InitialBody">
-    <aside id="menulateral">
-        <div id="Firstdiv">Channels</div>
-        <div id="Seconddiv">I want to add a channel
+    <aside id="AsideMenu">
+        <div id="FirstDiv">Channels</div>
+        <div id="SecondDiv">I want to add a channel
             <button id="AddingButton" onclick="CreateChannel()">+</button>
         </div>
         <div id="ChannelForm">
-            <input id="newchanneltextbox" type="text" name="nuevo_canal_a_crear" size="22" placeholder="Channel name to be created">
-            <button id="SaveButton" onclick="SaveChannel()">Save</button>
-        </div>
+            <input id="newchanneltextbox" type="text" name="new_channel_to_create" size="22" placeholder="Channel name to be created">
         <div id="error1"></div>
         <div id="mychannels">
             Existing channels
         </div>
     </aside>
-    <section id="cuerpodepagina">
+    <section id="MainSection">
         <div id="MainHeader">
         Welcome to RamonCampos Project for Geekshub Academy
         </div>
         <div id="MainBody">
-            <div id="contenedorprinc"></div>
+            <div id="MainContainer"></div>
         </div>
         <div id="MainFooter">
             <button id="SaveMessage" onclick="SaveMessage()">+</button>
