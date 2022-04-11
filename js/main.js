@@ -10,7 +10,7 @@ var channels= new Map();
 let text1 = document.getElementById("newchanneltextbox");
 let button1 = document.getElementById("SaveButton");
 let myError1 = document.getElementById("error1");
-let ChannelForm = document.getElementById("ChannelForm")
+let ChannelForm = document.getElementById("ChannelForm");
 let messageText = document.getElementById("NewMessageBox");
 let MessageButton = document.getElementById("SaveMessage");
 let MessageContainer = document.getElementById("MainFooter");
@@ -21,10 +21,8 @@ let PageHeader = document.getElementById("MainHeader");
 function CreateChannel() 
 {
     myError1.innerHTML = '';
-    if (window.getComputedStyle(ChannelForm).visibility === "hidden") 
-    {
-        show(ChannelForm);
-    } else hide(ChannelForm);
+    if (window.getComputedStyle(ChannelForm).visibility === "hidden") show(ChannelForm);
+    else hide(ChannelForm);
 }
 
 function SaveChannel() 
@@ -70,25 +68,21 @@ function SaveMessage()
     Messages.push(NewMessage);
     document.getElementById("NewMessageBox").value = "";
     MessageDiv.innerHTML = "";
-    for (let i = 0; i< Messages.length; i++)
-    {
-        MessageDiv.innerHTML = '<div class="ActualAuthorTime">'+Messages[i].AuthorName+' --> --> '+Messages[i].MessageTime+'</div><div class="ActualMessages">'+Messages[i].MessageContent+'</div>';
-        MainContainer.appendChild(MessageDiv);
-    }
+    for (let i = 0; i< Messages.length; i++) GetContainers(MessageDiv,Messages[i]);
 }
 
-function hide(ElementHtml){
+function hide(ElementHtml)
+{
     ElementHtml.style.visibility = "hidden";
-    
 }
 
-function show(ElementHtml){
+function show(ElementHtml)
+{
     ElementHtml.style.visibility = "visible";
 }
 
-
-function SearchInChannel(){
-
+function SearchInChannel()
+{
     let MessageSearched = document.getElementById("SearchMessageBox").value; 
     let ChanelForTheMessage = document.getElementById("SearchingContainer").innerHTML;
     let ExtraDiv = document.createElement("div");
@@ -99,8 +93,7 @@ function SearchInChannel(){
         if(ChannelToSearch[i].MessageContent.includes(MessageSearched))
         {
             let SearchDiv = document.createElement("div");
-            SearchDiv.innerHTML = '<div class="SearchedDiv">'+ChannelToSearch[i].AuthorName+'   '+ChannelToSearch[i].MessageTime+'</div><div class="SearchedMessages">'+ChannelToSearch[i].MessageContent+'</div>';
-            MainContainer.appendChild(SearchDiv);
+            GetContainers(SearchDiv,ChannelToSearch[i]);
         } 
     }
     if (MainContainer.childElementCount<1) MainContainer.innerHTML = "There are no messages containing the text you are looking for";
@@ -108,29 +101,27 @@ function SearchInChannel(){
     MainContainer.appendChild(ExtraDiv);
 }
 
-function ReturnToChannel() {
+function ReturnToChannel() 
+{
     let MainContainer = document.getElementById("contenedorprinc");
     let ChanelForTheMessage = document.getElementById("SearchingContainer").innerHTML;
     MainContainer.innerHTML = "";
     MessagesToShow = channels.get(ChanelForTheMessage);
     DisplayMessages(MessagesToShow);
-    /*
-    for (let i = 0; i< MessagesToShow.length; i++){
-        let MyDiv =document.createElement("div");
-        MyDiv.innerHTML = '<div class="ActualAuthorTime">'+Messages[i].AuthorName+' --> --> '+Messages[i].MessageTime+'</div><div class="ActualMessages">'+Messages[i].MessageContent+'</div>';
-        MainContainer.appendChild(MyDiv);
-    }
-    */
     document.getElementById("SearchMessageBox").value = "";
-
 }
 
 function DisplayMessages(ChannelToDIsplay) 
 {
-for (let i = 0; i< ChannelToDIsplay.length; i++)
+    for (let i = 0; i< ChannelToDIsplay.length; i++)
     {
         let DisplayMessageDiv =document.createElement("div");
-        DisplayMessageDiv.innerHTML = '<div class="ActualAuthorTime">'+Messages[i].AuthorName+' --> --> '+Messages[i].MessageTime+'</div><div class="ActualMessages">'+Messages[i].MessageContent+'</div>';
-        MainContainer.appendChild(DisplayMessageDiv);
+        GetContainers(DisplayMessageDiv,ChannelToDIsplay[i]);
     }
+}
+
+function GetContainers(DivToDisPlay,ObjectToDisplay) 
+{
+    DivToDisPlay.innerHTML = '<div class="ActualAuthorTime">'+ObjectToDisplay.AuthorName+' --> --> '+ObjectToDisplay.MessageTime+'</div><div class="ActualMessages">'+ObjectToDisplay.MessageContent+'</div>';
+    MainContainer.appendChild(DivToDisPlay);
 }
