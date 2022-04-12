@@ -14,7 +14,7 @@ Final Project geeks course
 
 <br>
 
-#What is it
+# What is it
 
 This is a project for the Geekshub course.
 
@@ -24,7 +24,7 @@ This is a project to evaluate the assimilation of different concepts explained d
 
 <br>
 
-#How to run
+# How to run
 
 The way of "using" the webpage is pretty staright forward.
 
