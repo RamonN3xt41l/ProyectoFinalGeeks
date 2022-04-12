@@ -6,8 +6,8 @@ Final Project geeks course
 #### Table of Contents  
 
 
-- [What is it ❓](#What-is-it-) 
-- [How to run it 🏃‍♀️](#How-to-run-it-)  
+- [What is it ❓](#What-is-it-)
+- [How to run it 🏃‍♀️](#How-to-run-it-)
 - [Used Technology 💻](#UsedTech-)
 - [Backend 🔙](#Backend-) 
 - [Frontend 🎨](#Frontend-)  
