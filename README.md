@@ -36,11 +36,11 @@ in the aside menu, that is always visible, you will be able to create new channe
 
 In the Main body of the web page, you will see (once you click on a channel from the aside menu) 3 different subparts:
 
-1. at the very top. A searchbar to look for messages inside the channel
+1. At the very top. A searchbar to look for messages inside the channel.
 
-2. in the "middle". A list of all the messages of the channel being displayed, with some of the details of such message also displayed.
+2. In the "middle". A list of all the messages of the channel being displayed, with some of the details of such messages also displayed.
 
-3. at the very bottom. A text box that will be used to store new messages in the channel
+3. At the very bottom. A text box that will be used to store new messages in the channel at use.
 
 The searchbar will automatically display the messages that contain the string you are writting in the box, and a button in order to come back to the channel you were at the first place (you can as well go to any channel by clicking on it on the aside menu)
 
