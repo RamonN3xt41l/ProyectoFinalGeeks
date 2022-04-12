@@ -131,3 +131,5 @@ Special Thanks to:
 [Dbuedo](https://github.com/dbuedo), [Pablofcn](https://github.com/pablofcnNext) and [SirMartin](https://github.com/SirMartin), for all the help provided 
 within this project, and all the other day-to-day doubts.
 
+
+# [🡅 TOP 🡅](#Table-of-Contents)  
