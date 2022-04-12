@@ -25,7 +25,7 @@ The idea is to have a web page where several channels for sending messages can b
 one of them with its own attributes, such as Author, Content, Date, etc...
 
 This is a project to evaluate the assimilation of different concepts explained during the course. Since during the course we studied HTML, CSS and
-Javascript, most of the concepts to be evaluated are gonna be related to them. For example, the use of arrays, obects with attributes, methods, classes, 
+Javascript, most of the concepts to be evaluated are gonna be related to them. For example, the use of arrays, objects with attributes, methods, classes, 
 variables of different types, design of the web itself, etc.
 
 
