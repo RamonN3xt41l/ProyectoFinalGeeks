@@ -6,13 +6,13 @@ Final Project geeks course
 #### Table of Contents  
 
 
-- [What is it](#What-is-it) 
+- [What is it ❓](#What-is-it) 
 - [How to run 🚀](#How-to-run-)  
-- [Used Technology](#UsedTech-)
-- [Backend](#Backend-) 
-- [Frontend](#Frontend-)  
-- [References](#References-)  
-- [Acknowledgements](#Acknowledgements-)  
+- [Used Technology 💻](#UsedTech-)
+- [Backend 🔙](#Backend-) 
+- [Frontend 🎨](#Frontend-)  
+- [References 🙌](#References-)  
+- [Acknowledgements 👏](#Acknowledgements-)  
 
 <br>
 
