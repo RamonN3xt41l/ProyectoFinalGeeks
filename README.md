@@ -7,7 +7,7 @@ Final Project geeks course
 
 
 - [What is it ❓](#What-is-it-)
-- [running it 🏃‍♀️](#Running-it-)
+- [Running it 🏃‍♀️](#Running-it-)
 - [Used Technology 💻](#UsedTech-)
 - [Backend 🔙](#Backend-) 
 - [Frontend 🎨](#Frontend-)  
