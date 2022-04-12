@@ -8,7 +8,6 @@ Final Project geeks course
 
 - [What is it ❓](#What-is-it-)
 - [How to run it 🏃‍♀️](#How-to-run-it-)
-- [How to run it 🏃‍♀️](#How-to-run-it-)
 - [Used Technology 💻](#UsedTech-)
 - [Backend 🔙](#Backend-) 
 - [Frontend 🎨](#Frontend-)  
@@ -30,6 +29,7 @@ This is a project to evaluate the assimilation of different concepts explained d
 <br>
 
 # How to run it 🏃‍♀️
+
 
 The way of using  the webpage is pretty straight forward.
 
