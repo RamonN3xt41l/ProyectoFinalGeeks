@@ -91,7 +91,7 @@ channels, etc...are not saved anywhere, so they dissapear when reloading the web
 
 # Frontend 🎨
 
-## Features 📃
+## Features ⚙️
 
 - Homepage:
 	- Aside Menu with:
