@@ -24,6 +24,7 @@ The idea is to have a web page where several channels for sending messages can b
 
 This is a project to evaluate the assimilation of different concepts explained during the course. Since during the course we studied HTML, CSS and Javascript, most of the concepts to be evaluated are gonna be related to them. For example, the use of arrays, obects with attributes, methods, classes, variables of different types, design of the web itself, etc.
 
+
 <br>
 
 # How to run it 🏃‍♀️
@@ -82,6 +83,9 @@ A lot of webpages were checked to obtain information about how to proceed with c
 2. [Mclibre](https://www.mclibre.org/)
 3. [Developer Mozilla](https://developer.mozilla.org/es/)
 4. [Github](https://github.com/)
+
+
+<br>
 
 # Acknowledgements 👏
 
