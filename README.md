@@ -7,12 +7,12 @@ Final Project geeks course
 
 
 - [What is it ❓](#What-is-it-)
+- [Using it🏃‍♀️](#Using-it-)
 - [Used Technology 💻](#Used-Technology-)
 - [Backend 🔙](#Backend-) 
 - [Frontend 🎨](#Frontend-)  
 - [References 🙌](#References-)  
 - [Acknowledgements 👏](#Acknowledgements-)
-- [Using 🏃‍♀️](#Using-)
 
 
 <br>
