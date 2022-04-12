@@ -133,4 +133,3 @@ function GetContainers(DivToDisPlay,ObjectToDisplay)
     MainContainer.appendChild(DivToDisPlay);
 }
 // pensar en meter un scroll en el listado de canales tmb
-// darle formato a los mensajes de busqueda
