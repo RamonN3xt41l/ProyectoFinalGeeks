@@ -39,21 +39,21 @@ The way of using  the webpage is pretty straight forward.
 When the page is first charged, you will be able to see an aside menu and a main body.
 
 in the aside menu, that is always visible, you will be able to create new channels, in order to do that you just have to:
-  -Click on the plus sign in the aside menu
+1.Click on the plus sign in the aside menu
 
-  -Insert the name of the channel in the text box that just popped up
+2.Insert the name of the channel in the text box that just popped up
 
-  -Click on the save button (if you ckick on this button without a text written in the box mentiones below, an error message will appear)
+3.Click on the save button (if you ckick on this button without a text written in the box mentiones below, an error message will appear)
 
-  -You will now see your new channel in the Channel list in the aside menu
+4.You will now see your new channel in the Channel list in the aside menu
 
 In the Main body of the web page, you will see (once you click on a channel from the aside menu) 3 different subparts:
 
-  -At the very top of the web body. A searchbar to look for messages inside the channel.
+1.At the very top of the web body. A searchbar to look for messages inside the channel.
 
-  -In the middle of the page body. A list of all the messages of the channel being displayed, with some of the details of such messages also displayed.
+2.In the middle of the page body. A list of all the messages of the channel being displayed, with some of the details of such messages also displayed.
 
-  -At the very bottom of the web body. A text box that will be used to store new messages in the channel at use.
+3.At the very bottom of the web body. A text box that will be used to store new messages in the channel at use.
 
 When using the searchbar, it will automatically display the messages that contain the string you are writting in the textbox
 once you are searching you will see a button in order to come back to the channel you were at the first place (you can as well go to any channel by 
