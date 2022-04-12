@@ -7,7 +7,7 @@ Final Project geeks course
 
 
 - [What is it ❓](#What-is-it-)
-- [Using it🏃‍♀️](#Using-it-)
+- [Using it 🏃‍♀️](#Using-it-)
 - [Used Technology 💻](#Used-Technology-)
 - [Backend 🔙](#Backend-) 
 - [Frontend 🎨](#Frontend-)  
@@ -31,7 +31,7 @@ variables of different types, design of the web itself, etc.
 
 <br>
 
-# Using 🏃‍♀️
+# Using it 🏃‍♀️
 
 
 The way of using  the webpage is pretty straight forward.
