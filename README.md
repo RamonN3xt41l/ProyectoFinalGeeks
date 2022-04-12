@@ -6,7 +6,7 @@ Final Project geeks course
 #### Table of Contents  
 
 
-- [What is it ❓](#What-is-it) 
+- [What is it ❓](#What-is-it-) 
 - [How to run it 🏃‍♀️](#How-to-run-)  
 - [Used Technology 💻](#UsedTech-)
 - [Backend 🔙](#Backend-) 
@@ -49,7 +49,7 @@ in the text box to enter new messages you just have to write the message you wan
 
 <br>
 
-# UsedTech- 💻
+# UsedTech 💻
 
 The technology that was used in this project is a very common one, in order to develop the code, visual studio code was the software chosen, and HTML5, CSS and Javascript Vanilla were the languages used to write the code itself.
 
