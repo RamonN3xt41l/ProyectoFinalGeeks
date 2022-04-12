@@ -7,7 +7,7 @@ Final Project geeks course
 
 
 - [What is it ❓](#What-is-it-)
-- [Running it 🏃‍♀️](#Running-it-)
+- [Running 🏃‍♀️](#Running-)
 - [Used Technology 💻](#UsedTech-)
 - [Backend 🔙](#Backend-) 
 - [Frontend 🎨](#Frontend-)  
@@ -28,7 +28,7 @@ This is a project to evaluate the assimilation of different concepts explained d
 
 <br>
 
-# Running it 🏃‍♀️
+# Running 🏃‍♀️
 
 
 The way of using  the webpage is pretty straight forward.
