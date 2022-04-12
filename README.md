@@ -101,10 +101,10 @@ channels, etc...are not saved anywhere, so they dissapear when reloading the web
 	- Main Body with:
 	  - "Welcome to RamonCampos Project for Geekshub Academy" welcoming message
 	  - Once you have clicked on one of the channels from the aside menu:
-  	  - Name of the Channel
-  	  - Search Box
-  	  - Messages of the channel (if any)
-  	  - "+" button and text box to be able to write new messages in the channel  
+  	  	- Name of the Channel
+  	  	- Search Box
+  	  	- Messages of the channel (if any)
+  	  	- "+" button and text box to be able to write new messages in the channel  
     
 
 <br>
