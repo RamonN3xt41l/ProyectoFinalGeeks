@@ -58,7 +58,7 @@ This web should be able to be open at any of the more standard web browsers with
 
 <br>
 
-# Backend- 🔙
+# Backend 🔙
 
 For this specific project we have not used any backend at all. For example we dont have a database, or any similar data source.
 
@@ -69,12 +69,12 @@ This last point is causing our messages (once they have been introduced) to be a
 
 <br>
 
-# Frontend- 🎨
+# Frontend 🎨
 
 
 <br>
 
-# References- 🙌
+# References 🙌
 
 A lot of webpages were checked to obtain information about how to proceed with certain procedures or stoppers i faced. But i am gonna have to give special mention to the following:
 
