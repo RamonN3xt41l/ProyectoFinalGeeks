@@ -12,6 +12,7 @@ Final Project geeks course
 - [Backend](#Backend-) 
 - [Frontend](#Frontend-)  
 - [References](#References-)  
+- [Acknowledgements](#Acknowledgements-)  
 
 <br>
 
@@ -81,3 +82,10 @@ A lot of webpages were checked to obtain information about how to proceed with c
 2. [Mclibre](https://www.mclibre.org/)
 3. [Developer Mozilla](https://developer.mozilla.org/es/)
 4. [Github](https://github.com/)
+
+# Acknowledgements-
+
+Special Thanks to:
+[Nextail Labs S.L.](https://nextail.co/) for paying for my formation
+[Dbuedo](https://github.com/dbuedo) [Pablofcn](https://github.com/pablofcnNext) and [SirMartin](https://github.com/SirMartin) for all the help provided with this project and all the day-to-day doubts 
+
