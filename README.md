@@ -70,3 +70,14 @@ This last point is causing our messages (once they have been introduced) to be a
 
 # Frontend-
 
+
+<br>
+
+# References-
+
+A lot of webpages were checked to obtain information about how to proceed with certain procedures or stoppers i faced. But i am gonna have to give special mention to the following:
+
+1. [STack Overflow](https://stackoverflow.com/).
+2. [Mclibre](https://www.mclibre.org/).
+3. [Developer Mozilla](https://developer.mozilla.org/es/)
+4. [Github](https://github.com/)
