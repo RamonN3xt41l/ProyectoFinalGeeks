@@ -30,7 +30,7 @@ This is a project to evaluate the assimilation of different concepts explained d
 
 # How to run it 🏃‍♀️
 
-The way of using the webpage is pretty straight forward.
+The way of using  the webpage is pretty straight forward.
 
 When the page is first charged, you will be able to see an aside menu and a main body.
 
