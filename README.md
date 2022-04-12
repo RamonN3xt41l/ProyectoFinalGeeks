@@ -8,7 +8,7 @@ Final Project geeks course
 
 - [What is it ❓](#What-is-it-)
 - [Using 🏃‍♀️](#Using-)
-- [Used Technology 💻](#UsedTech-)
+- [Used Technology 💻](#Used-Technology-)
 - [Backend 🔙](#Backend-) 
 - [Frontend 🎨](#Frontend-)  
 - [References 🙌](#References-)  
@@ -58,7 +58,7 @@ in the middle part of the web main body. Please note that the message will have 
 
 <br>
 
-# UsedTech 💻
+# Used Technology 💻
 
 The technology that was used in this project is a very common one, in order to develop the code, visual studio code was the software chosen, and HTML5, 
 CSS and Javascript Vanilla were the languages used to write the code itself.
