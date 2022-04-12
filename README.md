@@ -7,7 +7,7 @@ Final Project geeks course
 
 
 - [What is it ❓](#What-is-it) 
-- [How to run 🚀](#How-to-run-)  
+- [How to run it 🏃‍♀️](#How-to-run-)  
 - [Used Technology 💻](#UsedTech-)
 - [Backend 🔙](#Backend-) 
 - [Frontend 🎨](#Frontend-)  
@@ -16,7 +16,7 @@ Final Project geeks course
 
 <br>
 
-# What is it
+# What is it ❓
 
 This is a project for the Geekshub course.
 
@@ -26,7 +26,7 @@ This is a project to evaluate the assimilation of different concepts explained d
 
 <br>
 
-# How to run
+# How to run 🏃‍♀️
 
 The way of "using" the webpage is pretty staright forward.
 
@@ -49,7 +49,7 @@ in the text box to enter new messages you just have to write the message you wan
 
 <br>
 
-# UsedTech-
+# UsedTech- 💻
 
 The technology that was used in this project is a very common one, in order to develop the code, visual studio code was the software chosen, and HTML5, CSS and Javascript Vanilla were the languages used to write the code itself.
 
@@ -58,7 +58,7 @@ This web should be able to be open at any of the more standard web browsers with
 
 <br>
 
-# Backend-
+# Backend- 🔙
 
 For this specific project we have not used any backend at all. For example we dont have a database, or any similar data source.
 
@@ -69,12 +69,12 @@ This last point is causing our messages (once they have been introduced) to be a
 
 <br>
 
-# Frontend-
+# Frontend- 🎨
 
 
 <br>
 
-# References-
+# References- 🙌
 
 A lot of webpages were checked to obtain information about how to proceed with certain procedures or stoppers i faced. But i am gonna have to give special mention to the following:
 
@@ -83,7 +83,7 @@ A lot of webpages were checked to obtain information about how to proceed with c
 3. [Developer Mozilla](https://developer.mozilla.org/es/)
 4. [Github](https://github.com/)
 
-# Acknowledgements-
+# Acknowledgements- 👏
 
 Special Thanks to:
 
