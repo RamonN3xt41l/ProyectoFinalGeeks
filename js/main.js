@@ -6,6 +6,7 @@ class ChannelMessages {
         this.MessageContent = '';
     }
 }
+//!("key" in obj) // true if "key" doesn't exist in object
 let channels= new Map(); 
 let text1 = document.getElementById("newchanneltextbox");
 let button1 = document.getElementById("SaveButton");
@@ -32,14 +33,16 @@ function SaveChannel()
     let channelName = document.getElementById("newchanneltextbox").value;
     if(channelName != ''){
         myError1.innerHTML = '';
-        channels.set(channelName, new Array());
-        for (let key of channels.keys()) 
-        {
-            p.innerHTML= '<div class="mimenu" onclick="ShowChannelMessages(\''+key+'\')">'+key+'</div>';
-            objetoH.appendChild(p);
-        }
-        document.getElementById("newchanneltextbox").value = "";
-        hide(ChannelForm);
+        if(!(channels.has(channelName))){
+            channels.set(channelName, new Array());
+            for (let key of channels.keys()) 
+            {
+                p.innerHTML= '<div class="mimenu" onclick="ShowChannelMessages(\''+key+'\')">'+key+'</div>';
+                objetoH.appendChild(p);
+            }
+            document.getElementById("newchanneltextbox").value = "";
+            hide(ChannelForm);
+        }else myError1.innerHTML = 'The channel name already exists';
     } else myError1.innerHTML = 'Please enter the channel name';
 }
 
@@ -132,4 +135,4 @@ function GetContainers(DivToDisPlay,ObjectToDisplay)
     DivToDisPlay.innerHTML = '<div class="ActualAuthorTime">'+ObjectToDisplay.AuthorName+' --> --> '+ObjectToDisplay.MessageTime+'</div><div class="ActualMessages">'+ObjectToDisplay.MessageContent+'</div>';
     MainContainer.appendChild(DivToDisPlay);
 }
-// pensar en meter un scroll en el listado de canales tmb
+// que pasa cuando se repite el nombre de un canal
