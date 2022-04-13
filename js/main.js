@@ -6,7 +6,7 @@ class ChannelMessages {
         this.MessageContent = '';
     }
 }
-//!("key" in obj) // true if "key" doesn't exist in object
+
 let channels= new Map(); 
 let text1 = document.getElementById("newchanneltextbox");
 let button1 = document.getElementById("SaveButton");
@@ -31,26 +31,43 @@ function SaveChannel()
 {
     let p =document.createElement("p");
     let channelName = document.getElementById("newchanneltextbox").value;
-    if(channelName != ''){
-        myError1.innerHTML = '';
-        if(!(channels.has(channelName))){
-            channels.set(channelName, new Array());
-            for (let key of channels.keys()) 
-            {
-                p.innerHTML= '<div class="mimenu" onclick="ShowChannelMessages(\''+key+'\')">'+key+'</div>';
-                objetoH.appendChild(p);
-            }
-            document.getElementById("newchanneltextbox").value = "";
-            hide(ChannelForm);
-        }else myError1.innerHTML = 'The channel name already exists';
-    } else myError1.innerHTML = 'Please enter the channel name';
+    if (IsTheChannelEmpty(channelName)) return;
+    myError1.innerHTML = '';
+    if (IsTheChannelInUSe(channelName)) return;
+    channels.set(channelName, new Array());
+    for (let key of channels.keys()) 
+        {
+            p.innerHTML= '<div class="mimenu" onclick="ShowChannelMessages(\''+key+'\')">'+key+'</div>';
+            objetoH.appendChild(p);
+        }
+    document.getElementById("newchanneltextbox").value = "";
+    hide(ChannelForm);
+}
+
+function IsTheChannelEmpty(channelName)
+{
+if(channelName == '') 
+    {
+        myError1.innerHTML = 'Please enter the channel name';
+        return true;
+    }
+return false
+}
+
+function IsTheChannelInUSe(channelName)
+{
+if(channels.has(channelName))
+    {
+        myError1.innerHTML = 'The channel name already exists';
+        return true;
+    }
+return false
 }
 
 function ShowChannelMessages(channelKey) 
 {
-    if(window.getComputedStyle(MessageContainer).visibility === "hidden") {
-        show(MessageContainer);
-    }
+    myError2.innerHTML = '';
+    if(window.getComputedStyle(MessageContainer).visibility === "hidden") show(MessageContainer);
     MainContainer.innerHTML = "";
     PageHeader.innerHTML="";
     PageHeader.innerHTML = `<div><div id="SearchingContainer">${channelKey}</div><input id="SearchMessageBox" type="text" oninput="SearchInChannel()" name="Search_message_box" placeholder="Search within this channel"></div>`;
@@ -64,20 +81,28 @@ function SaveMessage()
     let ChanelForTheMessage = document.getElementById("SearchingContainer").innerHTML;
     let NewMessage = new ChannelMessages();
     let MessageWritten = document.getElementById("NewMessageBox").value;
-    if(MessageWritten != '')
+    
+    if (IsTheMessageNotEmpty(MessageWritten)) return;
+    myError2.innerHTML = '';
+    NewMessage.MessageContent = MessageWritten;
+    NewMessage.channelOwner= ChanelForTheMessage;
+    NewMessage.AuthorName= 'RamonCampos';
+    NewMessage.MessageTime = new Date().toLocaleString();
+    Messages = channels.get(ChanelForTheMessage);
+    Messages.push(NewMessage);
+    document.getElementById("NewMessageBox").value = "";
+    MessageDiv.innerHTML = "";
+    for (let i = 0; i< Messages.length; i++) GetContainers(MessageDiv,Messages[i]);
+}
+
+function IsTheMessageNotEmpty(MessageWritten)
+{
+    if(MessageWritten == '') 
     {
-        myError2.innerHTML = '';
-        NewMessage.MessageContent = MessageWritten;
-        NewMessage.channelOwner= ChanelForTheMessage;
-        NewMessage.AuthorName= 'RamonCampos';
-        NewMessage.MessageTime = new Date().toLocaleString();
-        Messages = channels.get(ChanelForTheMessage);
-        Messages.push(NewMessage);
-        document.getElementById("NewMessageBox").value = "";
-        MessageDiv.innerHTML = "";
-        for (let i = 0; i< Messages.length; i++) GetContainers(MessageDiv,Messages[i]);
+        myError2.innerHTML = 'Please enter a message'
+        return true;
     }
-    else myError2.innerHTML = 'Please enter a message';
+    return false;
 }
 
 function hide(ElementHtml)
@@ -95,6 +120,7 @@ function SearchInChannel()
     let MessageSearched = document.getElementById("SearchMessageBox").value; 
     let ChanelForTheMessage = document.getElementById("SearchingContainer").innerHTML;
     let ExtraDiv = document.createElement("div");
+    myError2.innerHTML = '';
     ChannelToSearch = channels.get(ChanelForTheMessage);
     MainContainer.innerHTML = '<div class="MessagesContainer">The messages you are looking for are:</div>';
     for (let i = 0; i< ChannelToSearch.length; i++)
@@ -105,7 +131,7 @@ function SearchInChannel()
             GetContainers(SearchDiv,ChannelToSearch[i]);
         } 
     }
-    if (MainContainer.childElementCount<1) MainContainer.innerHTML = '<div class="MessagesContainer">There are no messages containing the text you are looking for</div>';
+    if (MainContainer.childElementCount<2) MainContainer.innerHTML = '<div class="MessagesContainer">There are no messages containing the text you are looking for</div>';
     ExtraDiv.innerHTML = '<div id="ReturnContainer">In order to return to the channel messages please click here: <button onclick="ReturnToChannel()">Return</button></div>';
     MainContainer.appendChild(ExtraDiv);
     hide(MessageContainer);
@@ -135,4 +161,3 @@ function GetContainers(DivToDisPlay,ObjectToDisplay)
     DivToDisPlay.innerHTML = '<div class="ActualAuthorTime">'+ObjectToDisplay.AuthorName+' --> --> '+ObjectToDisplay.MessageTime+'</div><div class="ActualMessages">'+ObjectToDisplay.MessageContent+'</div>';
     MainContainer.appendChild(DivToDisPlay);
 }
-// que pasa cuando se repite el nombre de un canal
