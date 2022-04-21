@@ -43,7 +43,7 @@ in the aside menu, that is always visible, you will be able to create new channe
 
 2. Insert the name of the channel in the text box that just popped up
 
-3. Click on the save button (if you ckick on this button without a text written in the box mentiones below, an error message will appear)
+3. Click on the save button (if you click on this button without a text written in the box mentioned below, an error message will appear)
 
 4. You will now see your new channel in the Channel list in the aside menu
 
